@@ -1,6 +1,9 @@
 
 export default {
   mode: 'spa',
+  router: {
+    base: '/Solov.github.io/'
+  },
   /*
   ** Headers of the page
   */
