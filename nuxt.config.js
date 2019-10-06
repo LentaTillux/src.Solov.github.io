@@ -1,3 +1,8 @@
+const routerBase = process.env.DEPLOY_ENV === 'GH_PAGES' ? {
+  router: {
+    base: '/Solov.github.io/'
+  }
+} : {}
 
 export default {
   mode: 'spa',
@@ -64,5 +69,6 @@ export default {
     */
     extend (config, ctx) {
     }
-  }
+  },
+  ...routerBase
 }
