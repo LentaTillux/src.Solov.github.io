@@ -1,14 +1,11 @@
 const routerBase = process.env.DEPLOY_ENV === 'GH_PAGES' ? {
   router: {
-    base: '/Solov.github.io/'
+    base: '/'
   }
 } : {}
 
 export default {
   mode: 'spa',
-  router: {
-    base: '/Solov.github.io/'
-  },
   /*
   ** Headers of the page
   */
