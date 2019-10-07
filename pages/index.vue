@@ -24,6 +24,11 @@
           GitHub
         </a>
       </div>
+      <div class="links">
+        <NLink to="/about">
+          About Page
+        </NLink>
+      </div>
     </div>
   </div>
 </template>
