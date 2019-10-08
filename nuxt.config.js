@@ -28,6 +28,8 @@ export default {
   ** Global CSS
   */
   css: [
+    '@/assets/sass/main.sass',
+    '@/assets/scss/main.scss'
   ],
   /*
   ** Plugins to load before mounting the App
@@ -65,6 +67,14 @@ export default {
     ** You can extend webpack config here
     */
     extend (config, ctx) {
+    }
+  },
+  render: {
+    bundleRenderer: {
+      cache: require('lru-cache')({
+        max: 1000,
+        maxAge: 1000 * 60 * 15
+      })
     }
   },
   ...routerBase
