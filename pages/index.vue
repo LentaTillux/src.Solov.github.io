@@ -28,17 +28,30 @@
         <NLink to="/about">
           About Page
         </NLink>
+        <button @click="increment">
+          {{ counter }}
+        </button>
       </div>
     </div>
   </div>
 </template>
 
 <script>
-import Logo from '~/components/Logo.vue'
+
+import { mapState } from 'vuex'
 
 export default {
-  components: {
-    Logo
+
+  computed: mapState([
+    'counter'
+  ]),
+  fetch ({ store }) {
+    store.commit('increment')
+  },
+  methods: {
+    increment () {
+      this.$store.commit('increment')
+    }
   }
 }
 </script>
